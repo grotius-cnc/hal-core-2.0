@@ -20,7 +20,7 @@ This version is forged into a cmake project.
 	
 3. Configure step B, from ~/hal-core-2.0 dir :	
 
-    $ ./configure ~/hal-core-2.0 dir
+    $ ./configure 
 
 4. Build and install 
 
