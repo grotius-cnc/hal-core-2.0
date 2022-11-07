@@ -1,21 +1,21 @@
 #!/bin/bash
 #
-# ../scripts/realtime.  Generated from realtime.in by configure. 
-# on Mon Nov  7 13:44:32 CET 2022
+# @configure_input@ 
+# on @DATE@
 #
 
 export LANG=C
 
-GREP=/usr/bin/grep
-PS=/usr/bin/ps
+GREP=@GREP@
+PS=@PS@
 
 CheckKernel() {
-    case "" in
+    case "@KERNEL_VERS@" in
     "") ;;
     *)
-	if [ `uname -r` != "" ]; then
+	if [ `uname -r` != "@KERNEL_VERS@" ]; then
 	    cat 1>&2 << EOF
-RTAPI requires the real-time kernel  to run.  Before running
+RTAPI requires the real-time kernel @KERNEL_VERS@ to run.  Before running
 this realtime application, reboot and choose this kernel at the boot menu.
 EOF
 	    exit 1
@@ -23,17 +23,17 @@ EOF
     esac
 }
 
-RUN_IN_PLACE=yes
+RUN_IN_PLACE=@RUN_IN_PLACE@
 if [ $RUN_IN_PLACE = yes ]; then
     # When using RIP make sure PATH includes the directory where rtapi_app
     # resides
-    PATH=/opt/hal-core-2.0/bin:$PATH; export PATH
+    PATH=@EMC2_HOME@/bin:$PATH; export PATH
 fi
 
 CheckConfig(){
-    prefix=/opt/hal-core-2.0
-    exec_prefix=${prefix}
-    sysconfdir=${prefix}/etc
+    prefix=@prefix@
+    exec_prefix=@exec_prefix@
+    sysconfdir=@sysconfdir@
     if [ $RUN_IN_PLACE = yes ]; then
         RTAPICONF=
         # check in the LinuxCNC scripts directory
@@ -56,10 +56,10 @@ CheckConfig(){
 	echo "Missing rtapi.conf.  Check your installation." 1>&2
 	exit 1
     fi
-    INSMOD="/opt/hal-core-2.0/bin/module_helper insert"
-    RMMOD="/opt/hal-core-2.0/bin/module_helper remove"
-    LSMOD=""
-    FUSER="/usr/bin/fuser"
+    INSMOD="@INSMOD@"
+    RMMOD="@RMMOD@"
+    LSMOD="@LSMOD@"
+    FUSER="@FUSER@"
 
     # Import the config
     source $RTAPICONF

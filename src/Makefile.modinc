@@ -64,7 +64,7 @@ KERNELDIR :=
 CC := gcc
 RTAI = 
 RTFLAGS = $(filter-out -ffast-math,-DUSPACE ) -fno-fast-math $(call cc-option,-mieee-fp) -fno-unsafe-math-optimizations
-RTFLAGS := -Os -g -I. -I/home/user/Downloads/hal-core-2.0/src/include $(RTFLAGS) -DRTAPI -D_GNU_SOURCE -Drealtime
+RTFLAGS := -Os -g -I. -I/opt/hal-core-2.0/src/include $(RTFLAGS) -DRTAPI -D_GNU_SOURCE -Drealtime
 ifneq ($(KERNELRELEASE),)
 ifeq ($(RTARCH):$(RTAI):$(filter $(RTFLAGS),-msse),x86_64:3:)
 EXTRA_CFLAGS += -msse
@@ -72,16 +72,16 @@ endif
 endif
 EXTRA_CFLAGS += -fno-builtin-sin -fno-builtin-cos -fno-builtin-sincos
 USE_RTLIBM = @USE_RTLIBM@
-EMC2_HOME=/home/user/Downloads/hal-core-2.0
+EMC2_HOME=/opt/hal-core-2.0
 RUN_IN_PLACE=yes
 ifeq ($(RUN_IN_PLACE),yes)
 EXTRA_CFLAGS := $(RTFLAGS) -D__MODULE__ -I$(EMC2_HOME)/include
-RTLIBDIR := /home/user/Downloads/hal-core-2.0/rtlib
-LIBDIR := /home/user/Downloads/hal-core-2.0/lib
+RTLIBDIR := /opt/hal-core-2.0/rtlib
+LIBDIR := /opt/hal-core-2.0/lib
 else
-prefix := /home/user/Downloads/hal-core-2.0
+prefix := /opt/hal-core-2.0
 EXTRA_CFLAGS := $(RTFLAGS) -D__MODULE__ -I${prefix}/include/linuxcnc
-RTLIBDIR := /home/user/Downloads/hal-core-2.0/rtlib
+RTLIBDIR := /opt/hal-core-2.0/rtlib
 LIBDIR := ${exec_prefix}/lib
 endif
 EXTRA_CFLAGS += -Wframe-larger-than=2560
