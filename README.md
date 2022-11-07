@@ -4,15 +4,25 @@ Hal-core-2.0 is derived from hal-core.
 
 This version is forged into a cmake project.
 
-1 	Install dependencies :
+1. Install dependencies :
 
-    $ ./deps
+    $ sudo ./deps
 
-2 	Configure some filepath's :
+2. Configure step A, from ~/hal-core-2.0 dir/src dir :
 
-    $ ./configure
+	*(Note: this step has to be modified. We could
+	minimize this step, files like Makefile.inc etc
+	could be removed)
 
-3 	Build and install 
+	$ cd src
+	$ ./configure --enable-non-distributable=yes
+	$ cd ..
+	
+3. Configure step B, from ~/hal-core-2.0 dir :	
+
+    $ ./configure ~/hal-core-2.0 dir
+
+4. Build and install 
 
 	*(Note: will install files inside your git clone dir) :
 
@@ -21,16 +31,16 @@ This version is forged into a cmake project.
     $ cmake ..
     $ make
     $ make install
+    $ cd ..
 
-4 	Set permissions to install kernel modules.
+5. Set permissions to install kernel modules.
 
     $ cd bin
     $ ./setroot
     $ ./setdir
 
-5 	Run :
+6. Run :
 
-    $ cd bin
     $ ./runtest
 
 
