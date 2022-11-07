@@ -1,0 +1,7 @@
+When editing stepfiles in freecad. 
+
+Freecad as .deb package, install : $ sudo dpkg -i freecad.deb
+https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/freecad.deb
+
+For exporting seperate machine joints, create a compounnd of the selected joint. Then export the selected compound(s) as stepfile.
+This will save the current solid position as it is.

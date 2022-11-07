@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Link to optimized runtest.
+/opt/hal-core/src/hal/components/dofs/hal/./runtest

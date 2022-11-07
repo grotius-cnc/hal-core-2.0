@@ -1,0 +1,12 @@
+HALCMDSRCS := hal/utils/halcmd.c hal/utils/halcmd_commands.c hal/utils/halcmd_main.c
+HALSHSRCS := hal/utils/halcmd.c hal/utils/halcmd_commands.c hal/utils/halsh.c
+
+ifneq ($(READLINE_LIBS),)
+HALCMDSRCS += hal/utils/halcmd_completion.c
+endif
+USERSRCS += $(sort $(HALCMDSRCS) $(HALSHSRCS))
+
+../bin/halcmd: $(call TOOBJS, $(HALCMDSRCS)) ../lib/libhalcore.so.0 
+	$(ECHO) Linking $(notdir $@)
+	$(Q)$(CC) $(LDFLAGS) -o $@ $^ $(READLINE_LIBS)
+TARGETS += ../bin/halcmd

@@ -1,0 +1,7 @@
+.
+/opt/hal-core/src/rtapi
+/opt/hal-core/rtlib
+/opt/hal-core/include
+/opt/hal-core/src/hal/utils
+/opt/hal-core/src/hal
+/opt/hal-core/src/hal/components/dofs

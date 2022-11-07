@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+# Set the ~/lib path to be found by the system.
+
+sudo ldconfig $(pwd)/../lib
+echo "$(pwd)/../lib"
+
+
