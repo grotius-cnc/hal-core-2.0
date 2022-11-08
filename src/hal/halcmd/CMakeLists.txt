@@ -1,8 +1,9 @@
 set(PROJECT "halcmd") # The name of the file excluding .c or .h
-project(${PROJECT} CXX)
+project(${PROJECT})
 
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(BIN_DIR "${SRC_DIR}/../../../bin")
+set(RT_DIR "${SRC_DIR}/../../../rtlib")
 # If user decides to create a build dir use the path.
 set(BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 

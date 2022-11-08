@@ -1,9 +1,14 @@
 #!/usr/bin/bash
-
+ 
+# Set permissions to be albe to insert (insmod) kernel modules. 
 sudo chown root module_helper
 sudo chmod 4750 module_helper
 sudo chown root rtapi_app
 sudo chmod 4750 rtapi_app
+
+# Set the ~/lib path to be found by the system.
+sudo ldconfig $(pwd)/../lib
+echo "$(pwd)/../lib"
 
 cat << 'END'
 

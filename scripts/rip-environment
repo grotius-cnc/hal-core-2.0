@@ -1,12 +1,12 @@
 #!/bin/bash
 # Execute this file in the context of your shell, such as with
-#  . /opt/hal-core-2.0/scripts/rip-environment
+#  . /opt/hal-core/scripts/rip-environment
 # and your shell environment will be properly configured to run commands like
 # halcompile, halcmd, halrun, iosh, and python with the emc modules available.
 #
 # Alternately, use it as a wrapper to invoke a linuxcnc command that requires
 # the environment to be set:
-#  /opt/hal-core-2.0/scripts/rip-environment latency-test
+#  /opt/hal-core/scripts/rip-environment latency-test
 #
 #    Copyright 2006, 2007, 2008, 2009, 2014 Jeff Epler <jepler@unpythonic.net>
 #
@@ -55,19 +55,19 @@ if ! test "xyes" = "xyes"; then
 fi
 
 case "$PATH" in
-    /opt/hal-core-2.0/bin:*|*:/opt/hal-core-2.0/bin:*)
+    /opt/hal-core/bin:*|*:/opt/hal-core/bin:*)
         if ! $as_command; then
             echo "This script only needs to be run once per shell session."
             return
         fi ;;
 esac
 
-EMC2_HOME=/opt/hal-core-2.0; export EMC2_HOME
+EMC2_HOME=/opt/hal-core; export EMC2_HOME
 EMC2VERSION="Undetermined"; export EMC2VERSION
 LINUXCNCVERSION="Undetermined"; export LINUXCNCVERSION
-LINUXCNC_NCFILES_DIR="/opt/hal-core-2.0/nc_files"; export LINUXCNC_NCFILES_DIR
+LINUXCNC_NCFILES_DIR="/opt/hal-core/nc_files"; export LINUXCNC_NCFILES_DIR
 LINUXCNC_EMCSH=/usr/bin/wish8.6; export LINUXCNC_EMCSH
-PATH=/opt/hal-core-2.0/bin:$EMC2_HOME/scripts:$EMC2_HOME/tcl:"$PATH"
+PATH=/opt/hal-core/bin:$EMC2_HOME/scripts:$EMC2_HOME/tcl:"$PATH"
 
 if [ -z "$TCLLIBPATH" ]; then
     TCLLIBPATH=$EMC2_HOME/tcl

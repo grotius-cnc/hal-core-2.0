@@ -15,7 +15,6 @@
 # Do a ldconfig to update where your ~/lib directory can be found. Example:
 #   sudo ldconfig /opt/hal-core/lib
 
-
 cmake_minimum_required(VERSION 3.5)
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}")
@@ -52,3 +51,34 @@ add_subdirectory(src/hal/components/hostmot2)
 # dpkg -i ethercat-master.deb
 # add_subdirectory(src/hal/components/ethercat/lcec)
 # add_subdirectory(src/hal/components/ethercat/lcec_conf)
+
+# Configure. This creates a config.h file in the ~/src dir wich is used to compile fixed
+# filepath's into the source. Wich an sich is a bad idea. This results in a fixed
+# directory software.
+# execute_process(COMMAND bash -c "${SRC_DIR}/configure")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

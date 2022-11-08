@@ -1,3 +1,0 @@
-/opt/hal-core/src/hal/build/CMakeFiles/rebuild_cache.dir
-/opt/hal-core/src/hal/build/CMakeFiles/edit_cache.dir
-/opt/hal-core/src/hal/build/CMakeFiles/hal_lib.dir

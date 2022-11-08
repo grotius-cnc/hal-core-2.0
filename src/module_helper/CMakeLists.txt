@@ -27,7 +27,6 @@ SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}
 
 add_definitions(-DRTAPI)
 set(SOURCES
-    #"${SRC_DIR}/../module_helper/module_helper.c"
     "${SRC_DIR}/module_helper.c"
     )
 add_executable(${PROJECT_NAME} ${SOURCES})
