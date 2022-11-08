@@ -42,6 +42,7 @@ add_subdirectory(src/hal/components/stepgen)
 add_subdirectory(src/hal/components/test)
 add_subdirectory(src/hal/components/threads)
 add_subdirectory(src/hal/components/hostmot2)
+add_subdirectory(src/hal/components/dofs)
 
 # Opencascade, kdl-kinematics etc has to be installed first.
 # add_subdirectory(src/hal/components/skynet/hal)

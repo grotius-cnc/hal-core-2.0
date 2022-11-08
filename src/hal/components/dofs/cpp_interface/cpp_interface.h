@@ -1,7 +1,6 @@
 #ifndef CPP_INTERFACE_H
 #define CPP_INTERFACE_H
 
-#include "cpp_interface_global.h"
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -40,7 +39,7 @@ struct result {
     durationdiscretization durationdiscretizationtype;
 };
 
-class CPP_INTERFACE_EXPORT Cpp_interface
+class Cpp_interface
 {
 public:
 

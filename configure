@@ -35,7 +35,6 @@ if [ "$str1" == "$str2" ]; then
     read VAR
     str1=$VAR
     if [ "$str1" == "$str2" ]; then
-
         echo "Building from source."
         git clone https://github.com/grotius-cnc/orocos_kinematics_dynamics.git $VENDOR_DIR/orocos_kinematics_dynamics
         sudo apt-get install -y libeigen3-dev
@@ -47,10 +46,10 @@ if [ "$str1" == "$str2" ]; then
     else
         echo "using archive"
         mkdir $VENDOR_DIR/orocos_kinematics_dynamics
-        cd $VENDOR_DIR/orocos_kinematics_dynamics
-        wget  https://github.com/grotius-cnc/orocos_kinematics_dynamics/releases/download/precompiled_archive_amd64/orocos_kinematics_dynamics.tar.gz
-        cd $VENDOR_DIR/orocos_kinematics_dynamics
+        wget -O $VENDOR_DIR/orocos_kinematics_dynamics.tar.gz https://github.com/grotius-cnc/orocos_kinematics_dynamics/releases/download/precompiled_archive_amd64/orocos_kinematics_dynamics.tar.gz
+        cd $VENDOR_DIR
         tar -xf orocos_kinematics_dynamics.tar.gz
+        rm -rf orocos_kinematics_dynamics.tar.gz
     fi
 fi
 
@@ -79,15 +78,16 @@ if [ "$str1" == "$str2" ]; then
         echo "Compiling from source, this will take some time, set enabled in OCCT -> freeimage (loading images support) & freetype (letter fonts)."
         cmake .. -D USE_FREEIMAGE:BOOL=ON USE_FREETYPE:BOOL=ON
         make
-    else
-        echo "using archive"
+	else
+	    echo "using archive"
         mkdir $VENDOR_DIR/OCCT
-        cd $VENDOR_DIR/OCCT
-        wget https://github.com/grotius-cnc/OCCT/releases/download/amd64-precompiled/OCCT.tar.gz
-        tar -xf occt.tar.gz
-    fi
+        wget -O $VENDOR_DIR/OCCT.tar.gz https://github.com/grotius-cnc/OCCT/releases/download/amd64-precompiled/OCCT.tar.gz 
+        cd $VENDOR_DIR/
+        tar -xf OCCT.tar.gz
+        rm -rf OCCT.tar.gz
+	fi
 fi
-
+    
 # Create config.h file.
 echo "
     Creating ~/src/config.h
@@ -294,10 +294,11 @@ cat > $SRC_DIR/config.h <<EOF
 
 EOF
 
+cd $PWD_DIR
+rm -rf build
 mkdir -p build
 cd build
-cmake ..
-make
+cmake .. && make
 make install
 cd ..
 cd bin

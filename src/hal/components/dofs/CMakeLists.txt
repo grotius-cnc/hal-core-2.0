@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 # Component name.
-set(PROJECT "test") # The name of the file excluding .c or .h
+set(PROJECT "dofs") # The name of the file excluding .c or .h
 set(RTLINK "halcore") # Link to halcore or for Lcnc use linuxcnchal
 project(${PROJECT} C ASM) # Asm is optional.
 
@@ -19,8 +19,11 @@ include_directories(${RTAPI_DIR})
 include_directories(${HAL_DIR})
 include_directories(${LIB_DIR})
 
+# Compile c++ project before this hal module.
+add_subdirectory(${SRC_DIR}/cpp_interface)
+
 # Compile flags.
-SET(GCC_COVERAGE_COMPILE_FLAGS "-I. -I${RTAPI_DIR} -I${HAL_DIR} \
+SET(GCC_COVERAGE_COMPILE_FLAGS "-I. -I${RTAPI_DIR} -I${HAL_DIR}\
     -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE
     -Drealtime -D__MODULE__ -DSIM -fPIC -Os")
 add_definitions(-DRTAPI -DUSPACE -DRTAPI -D_GNU_SOURCE -D__MODULE__ )
@@ -29,12 +32,13 @@ add_definitions(-DRTAPI -DUSPACE -DRTAPI -D_GNU_SOURCE -D__MODULE__ )
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 ADD_LIBRARY(${PROJECT} SHARED
-    ${SRC_DIR}/test.c
+    ${SRC_DIR}/halmodule.c
 )
 
 # Compile link with libhalcore.so or linuxcnchal.so
 target_include_directories(${PROJECT_NAME} PRIVATE "${BUIlD_DIR}/src/hal/${RTLINK}")
-target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RTLINK})
+target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}/cpp_interface")
+target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RTLINK} ruckig)
 
 # make install
 install(TARGETS ${PROJECT} DESTINATION ${RT_DIR})

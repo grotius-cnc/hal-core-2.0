@@ -1,4 +1,28 @@
 #!/bin/bash
+cd ../../../../
 
-# Link to optimized runtest.
-/opt/hal-core/src/hal/components/dofs/hal/./runtest
+cd scripts
+. ./rip-environment
+./halclean
+cd  ..
+cd bin
+./halcmd stop
+./halcmd loadrt threads name1=base-thread fp1=0 period1=15000 name2=servo-thread period2=1000000
+
+# Load dofs
+./halcmd loadrt dofs nr=1
+
+./halcmd addf dofs.run servo-thread
+./halcmd addf dofs.pulse base-thread
+
+./halcmd setp dofs.enable.0           1       # bool 0-1
+./halcmd setp dofs.maxvel.0           250     # max velocity
+./halcmd setp dofs.maxacc.0           150     # max acceleration
+./halcmd setp dofs.maxjerk.0          10      # max jerk
+./halcmd setp dofs.tarpos.0           1000    # targetposition
+
+
+# start hal.
+./halcmd start
+
+
