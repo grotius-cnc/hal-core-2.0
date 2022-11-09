@@ -5,6 +5,10 @@ Hal-core-2.0 is derived from hal-core.
 This version is forged into a cmake project.
 
 	$ ./configure
+	
+	
+* Currently forging the last hal modules into cmake project.
+
 
 
 
