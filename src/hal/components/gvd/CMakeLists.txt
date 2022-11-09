@@ -1,9 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
 # Component name.
-set(PROJECT "dofs") # The name of the file excluding .c or .h
+set(PROJECT "interface") # The name of the file excluding .c or .h
 set(RT_CORE "halcore") # Link to halcore or for Lcnc use linuxcnchal
-set(CPP_PROJECT "ruckig") # Link to halcore or for Lcnc use linuxcnchal
-project(${PROJECT} C ASM) # Asm is optional.
+project(${PROJECT} C CXX ASM) # Asm is optional.
 
 # Set variables.
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
@@ -32,12 +31,19 @@ set(CMAKE_SHARED_LIBRARY_PREFIX "")
 ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/halmodule.h
     ${SRC_DIR}/halmodule.c
-)
+    ${SRC_DIR}/cpp_interface/cpp_interface.h
+    ${SRC_DIR}/cpp_interface/cpp_interface.cpp
+    ${SRC_DIR}/cpp_interface/libruckig/brake.hpp
+    ${SRC_DIR}/cpp_interface/libruckig/brake.cpp
+    ${SRC_DIR}/cpp_interface/libruckig/position-step1.cpp
+    ${SRC_DIR}/cpp_interface/libruckig/position-step2.cpp
+    ${SRC_DIR}/cpp_interface/libruckig/velocity-step1.cpp
+    ${SRC_DIR}/cpp_interface/libruckig/velocity-step2.cpp
+    )
 
-# Link libraries. Mention : we take parts from the build dir and from source dir.
+# Link to other libraries
 target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}/build/src/hal/${RT_CORE}")
-target_include_directories(${PROJECT_NAME} PRIVATE "${BUILD_DIR}/cpp_interface")
-target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE} ${CPP_PROJECT})
+target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE})
 
 # make install
 install(TARGETS ${PROJECT} DESTINATION ${RT_DIR})

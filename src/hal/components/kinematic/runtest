@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#sudo ldconfig /opt/hal-core-2.0/rtlib
+
+#PWD_DIR=$(pwd)
+
+cd ../../../../
+cd scripts
+. ./rip-environment
+./halclean
+cd ..
+cd bin
+
+./halcmd stop
+
+./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+./halcmd loadrt hal_kinematic
+
+./halcmd addf hal_kinematic servo-thread
+
+#./halcmd \-f $PWD_DIR/machinemodel.hal
+
+./halcmd start
+
+

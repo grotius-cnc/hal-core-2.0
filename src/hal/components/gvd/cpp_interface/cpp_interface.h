@@ -38,6 +38,7 @@ struct result {
     interface interfacetype;
     synchronization synchronizationtype;
     durationdiscretization durationdiscretizationtype;
+    double value;
 };
 
 class Cpp_interface

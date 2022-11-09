@@ -1,7 +1,7 @@
 #ifndef NEXT_H
 #define NEXT_H
 
-#include "next_global.h"
+//#include "next_global.h"
 #include <string>
 
 #ifndef ULAPI
@@ -94,7 +94,7 @@ struct data {
     int error=0;
 };
 
-class NEXT_EXPORT Next{
+class Next{
 public:
 
     Next();
@@ -107,9 +107,6 @@ public:
 
     data ik_wrapper(data d);
     data ik(data d);
-
-
-
 };
 
-#endif // NEXT_H
+#endif

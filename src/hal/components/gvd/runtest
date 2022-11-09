@@ -8,10 +8,10 @@ cd  ..
 cd bin
 ./halcmd stop
 ./halcmd loadrt threads name1=base-thread fp1=0 period1=15000 name2=servo-thread period2=1000000
-./halcmd loadrt dofs nr=1
-./halcmd addf dofs.run servo-thread
-./halcmd addf dofs.pulse base-thread
+./halcmd loadrt interface nr=1
+./halcmd addf interface.run servo-thread
+./halcmd addf interface.pulse base-thread
 ./halcmd start
-./halcmd show
+#./halcmd show
 
 

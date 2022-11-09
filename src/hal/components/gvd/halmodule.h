@@ -1,18 +1,8 @@
-#ifndef CPP_INTERFACE_H
-#define CPP_INTERFACE_H
+#ifndef HALMODULE_H
+#define HALMODULE_H
 
-//#include "cpp_interface_global.h"
-#include <iostream>
-#include <vector>
-#include <fstream>
-
-//! https://github.com/pantor/ruckig
-#include "libruckig/ruckig.hpp"
-
-ruckig::Ruckig<1> otg {0.001};
-ruckig::InputParameter<1> in;
-ruckig::OutputParameter<1> out;
-std::array<double, 1> vel, acc, pos;
+#include <stdio.h>
+#include <stdbool.h>
 
 enum interface {
     position,
@@ -35,20 +25,12 @@ struct result {
     double curvel,curacc,curpos,tarpos;
     double maxvel,maxacc,maxjerk;
     bool enable;
-    interface interfacetype;
-    synchronization synchronizationtype;
-    durationdiscretization durationdiscretizationtype;
+    enum interface interfacetype;
+    enum synchronization synchronizationtype;
+    enum durationdiscretization durationdiscretizationtype;
+    double value;
 };
 
-class Cpp_interface
-{
-public:
+extern struct result wrapper_get_pos_array(struct result input);
 
-public:
-    Cpp_interface();
-    result dofs(result input);
-private:
-
-};
-
-#endif // CPP_INTERFACE_H
+#endif // HALMODULE_H

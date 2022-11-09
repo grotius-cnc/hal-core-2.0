@@ -42,7 +42,15 @@ add_subdirectory(src/hal/components/stepgen)
 add_subdirectory(src/hal/components/test)
 add_subdirectory(src/hal/components/threads)
 add_subdirectory(src/hal/components/hostmot2)
-add_subdirectory(src/hal/components/dofs)
+
+#add_subdirectory(src/hal/components/dofs/cpp_interface)
+#add_subdirectory(src/hal/components/dofs)
+
+#add_subdirectory(src/hal/components/gvd/cpp_interface)
+add_subdirectory(src/hal/components/gvd)
+
+# add_subdirectory(src/hal/components/kinematic/cpp_interface)
+# add_subdirectory(src/hal/components/kinematic)
 
 # Opencascade, kdl-kinematics etc has to be installed first.
 # add_subdirectory(src/hal/components/skynet/hal)

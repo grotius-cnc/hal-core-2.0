@@ -30,6 +30,8 @@ read VAR
 str1=$VAR
 if [ "$str1" == "$str2" ]; then
     rm -rf $VENDOR_DIR/orocos_kinematics_dynamics
+    
+    sudo apt-get install libeigen3-dev libcppunit-dev
 
     echo "compile from source? y=yes, using archive n=no";
     read VAR
@@ -295,10 +297,24 @@ cat > $SRC_DIR/config.h <<EOF
 EOF
 
 cd $PWD_DIR
+
+# Clean bin dir.
+cd bin
+rm -rf module_helper
+rm -rf rtapi_app
+rm -rt halcmd
+cd ..
+
+# Clean rtlib.
+rm -rf rtlib/*
+
+# Clean previous build.
 rm -rf build
 mkdir -p build
 cd build
 cmake .. && make
+
+# Install files.
 make install
 cd ..
 cd bin

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,hal_kinematic.so -o hal_kinematic.so CMakeFiles/hal_kinematic.dir/halmodule.c.o  -lpthread -lrt 
