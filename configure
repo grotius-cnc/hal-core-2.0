@@ -302,14 +302,14 @@ cd $PWD_DIR
 cd bin
 rm -rf module_helper
 rm -rf rtapi_app
-rm -rt halcmd
+rm halcmd
 cd ..
 
 # Clean rtlib.
-rm -rf rtlib/*
+rm rtlib/*
 
 # Clean previous build.
-rm -rf build
+rm build
 mkdir -p build
 cd build
 cmake .. && make

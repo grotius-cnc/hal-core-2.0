@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/config.h
+
+/opt/hal-core-2.0/src/module_helper/module_helper.c
+limits.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+unistd.h
+-
+sys/utsname.h
+-
+config.h
+/opt/hal-core-2.0/src/module_helper/config.h
+sys/types.h
+-
+dirent.h
+-
+

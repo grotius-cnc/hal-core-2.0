@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -std=c++17 -shared -Wl,-soname,libkinematics.so -o libkinematics.so CMakeFiles/kinematics.dir/next.cpp.o  -Wl,-rpath,/usr/local/lib: /usr/local/lib/liborocos-kdl.so.1.4.0 

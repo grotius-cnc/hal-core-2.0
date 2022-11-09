@@ -9,11 +9,6 @@
 #include "rtapi_math.h"
 #include "halmodule.h"
 
-/* module information */
-MODULE_AUTHOR("Skynet");
-MODULE_DESCRIPTION("Halmodule kinematic");
-MODULE_LICENSE("GPL");
-
 static int comp_idx;
 
 typedef struct {

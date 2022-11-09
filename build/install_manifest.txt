@@ -1,0 +1,10 @@
+/opt/hal-core-2.0/src/hal/halcore/../../../lib/libhalcore.so
+/opt/hal-core-2.0/src/module_helper/../../bin/module_helper
+/opt/hal-core-2.0/src/hal/halcmd/../../../bin/halcmd
+/opt/hal-core-2.0/src/hal/hallib/../../../rtlib/hal_lib.so
+/opt/hal-core-2.0/src/rtapi/../../bin/rtapi_app
+/opt/hal-core-2.0/src/hal/components/parport/../../../../rtlib/hal_parport.so
+/opt/hal-core-2.0/src/hal/components/stepgen/../../../../rtlib/stepgen.so
+/opt/hal-core-2.0/src/hal/components/test/../../../../rtlib/test.so
+/opt/hal-core-2.0/src/hal/components/threads/../../../../rtlib/threads.so
+/opt/hal-core-2.0/src/hal/components/hostmot2/../../../../rtlib/hostmot2.so

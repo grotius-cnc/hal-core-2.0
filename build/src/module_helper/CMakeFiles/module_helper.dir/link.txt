@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -rdynamic CMakeFiles/module_helper.dir/module_helper.c.o -o module_helper  -pthread -lrt -ludev -ldl 

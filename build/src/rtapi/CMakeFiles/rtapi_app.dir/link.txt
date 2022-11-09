@@ -1,0 +1,1 @@
+/usr/bin/c++  -DSIM -UULAPI -DRTAPI -pthread  -DSIM -UULAPI -DRTAPI -pthread -rdynamic CMakeFiles/rtapi_app.dir/uspace_rtapi_app.cc.o CMakeFiles/rtapi_app.dir/uspace_rtapi_parport.cc.o CMakeFiles/rtapi_app.dir/uspace_rtapi_string.c.o CMakeFiles/rtapi_app.dir/rtapi_pci.cc.o -o rtapi_app  -pthread -lrt -ludev -ldl 

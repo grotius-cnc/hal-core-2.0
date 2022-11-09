@@ -1,7 +1,6 @@
 #ifndef NEXT_H
 #define NEXT_H
 
-//#include "next_global.h"
 #include <string>
 
 #ifndef ULAPI
