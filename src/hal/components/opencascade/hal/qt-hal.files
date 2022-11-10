@@ -1,8 +1,0 @@
-Makefile
-halmodule.c
-halmodule.h
-link.hal
-make
-opencascade.c
-opencascade.h
-runtest

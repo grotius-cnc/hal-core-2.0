@@ -1,7 +1,6 @@
 #ifndef CPP_INTERFACE_H
 #define CPP_INTERFACE_H
 
-#include "cpp_interface_global.h"
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -16,7 +15,6 @@ ruckig::InputParameter<ruckig::DynamicDOFs> in {static_cast<size_t>(i)};
 ruckig::OutputParameter<ruckig::DynamicDOFs> out {static_cast<size_t>(i)};
 std::array<double, 3> pos, vel, acc;
 */
-
 
 ruckig::Ruckig<6> otg {0.001};
 ruckig::InputParameter<6> in;
@@ -50,7 +48,7 @@ struct result {
     durationdiscretization durationdiscretizationtype;
 };
 
-class CPP_INTERFACE_EXPORT Cpp_interface
+class Cpp_interface
 {
 public:
 
@@ -61,4 +59,4 @@ private:
 
 };
 
-#endif // CPP_INTERFACE_H
+#endif

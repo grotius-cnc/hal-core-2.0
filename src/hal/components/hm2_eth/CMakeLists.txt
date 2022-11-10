@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 # Component name.
-set(PROJECT "dofs") # The name of the file excluding .c or .h
+set(PROJECT "hm2_eth") # The name of the file excluding .c or .h
 set(RT_CORE "halcore") # Link to halcore or for Lcnc use linuxcnchal
 project(${PROJECT} C CXX ASM) # Asm is optional.
 
@@ -29,16 +29,8 @@ add_definitions(-DRTAPI -DUSPACE -DRTAPI -D_GNU_SOURCE -D__MODULE__ )
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 ADD_LIBRARY(${PROJECT} SHARED
-    ${SRC_DIR}/halmodule.h
-    ${SRC_DIR}/halmodule.c
-    ${SRC_DIR}/cpp_interface/cpp_interface.h
-    ${SRC_DIR}/cpp_interface/cpp_interface.cpp
-    ${SRC_DIR}/cpp_interface/libruckig/brake.hpp
-    ${SRC_DIR}/cpp_interface/libruckig/brake.cpp
-    ${SRC_DIR}/cpp_interface/libruckig/position-step1.cpp
-    ${SRC_DIR}/cpp_interface/libruckig/position-step2.cpp
-    ${SRC_DIR}/cpp_interface/libruckig/velocity-step1.cpp
-    ${SRC_DIR}/cpp_interface/libruckig/velocity-step2.cpp
+    ${SRC_DIR}/hm2_eth.h
+    ${SRC_DIR}/hm2_eth.c
     )
 
 # Link to other libraries

@@ -28,6 +28,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::Update_Opencascade()
 {    
+    /*
     // Using extern variables from next class:
     ui->lineEdit_j0->setText(QString::number(databucket.J0,'f',3));
     ui->lineEdit_j1->setText(QString::number(databucket.J1,'f',3));
@@ -76,7 +77,7 @@ void MainWindow::Update_Opencascade()
                                            databucket.J5*toRadians);
     }
 
-
+    */
 }
 
 void MainWindow::gcode(){

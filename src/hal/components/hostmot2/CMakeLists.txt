@@ -30,7 +30,6 @@ set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/${PROJECT}.c
-
 )
 
 # Compile link with libhalcore.so or linuxcnchal.so
@@ -39,6 +38,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RTLINK})
 
 # make install
 install(TARGETS ${PROJECT} DESTINATION ${RT_DIR})
+
 
 
 

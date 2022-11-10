@@ -1,18 +1,25 @@
 #!/usr/bin/bash
 
-# Clean up previous hal-core sessions
-/opt/hal-core/scripts/./halrun -U
+cd ../../../../
+echo $(pwd)
+PWD_DIR=$(pwe)
 
-# Startup hal-core
-cd /opt/hal-core/scripts/ && . ./rip-environment
+cd scripts
+./halclean
+cd ..
+cd bin
 
-cd /opt/hal-core/bin
+./halcmd stop
 
-halcmd stop
-halcmd loadrt hm2_eth # Fill in your data : [config="str[,str...]"] [board_ip=ip[,ip...]] [board_mac=mac[,mac...]] # http://linuxcnc.org/docs/html/man/man9/hm2_eth.9.html
-halcmd start
+# http://linuxcnc.org/docs/html/man/man9/hm2_eth.9.html
+#   Finish this line first :
+#   ./halcmd loadrt hm2_eth ".......yourdata..........."
+#
+# [config="str[,str...]"] [board_ip=ip[,ip...]]
+# [board_mac=mac[,mac...]]
 
-halcmd show
+./halcmd loadrt hm2_eth 
+./halcmd start
 
-# To clean the hal environment :
-# $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U
+./halcmd show
+

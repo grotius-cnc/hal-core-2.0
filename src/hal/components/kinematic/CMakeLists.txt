@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 # Component name.
-set(PROJECT "kinematic") # The name of the file excluding .c or .h
+set(PROJECT "hal_kinematic") # The name of the file excluding .c or .h
 set(RT_CORE "halcore") # Link to halcore or for Lcnc use linuxcnchal
 project(${PROJECT} C CXX ASM) # Asm is optional.
 
@@ -25,8 +25,12 @@ SET(GCC_COVERAGE_COMPILE_FLAGS "
     -Drealtime -D__MODULE__ -DSIM -fPIC -Os pthread rt")
 add_definitions(-DRTAPI -DUSPACE -DRTAPI -D_GNU_SOURCE -D__MODULE__ )
 
-SET( KDL_INSTALL ${CMAKE_INSTALL_PREFIX} CACHE PATH "The KDL installation directory.")
-INCLUDE (${PROJECT_SOURCE_DIR}/FindKDL.cmake)
+include_directories("/usr/include/eigen3")
+find_package (Eigen3 3.3 REQUIRED)
+
+include_directories("/opt/hal-core-2.0/src/vendor/orocos_kinematics_dynamics/orocos_kdl/src")
+add_library(kdl SHARED IMPORTED)
+set_target_properties(kdl PROPERTIES IMPORTED_LOCATION /opt/hal-core-2.0/src/vendor/orocos_kinematics_dynamics/orocos_kdl/build/src/liborocos-kdl.so)
 
 # No "lib" before filename.
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
@@ -34,13 +38,13 @@ set(CMAKE_SHARED_LIBRARY_PREFIX "")
 ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/halmodule.h
     ${SRC_DIR}/halmodule.c
-    ${SRC_DIR}/cpp_interface/next.h
-    ${SRC_DIR}/cpp_interface/next.cpp
+    ${SRC_DIR}/cpp_interface/cpp_interface.h
+    ${SRC_DIR}/cpp_interface/cpp_interface.cpp
     )
 
 # Link to other libraries
 target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}/build/src/hal/${RT_CORE}")
-target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE})
+target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE} orocos-kdl)
 
 # make install
 install(TARGETS ${PROJECT} DESTINATION ${RT_DIR})

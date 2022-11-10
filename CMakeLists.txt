@@ -43,22 +43,23 @@ add_subdirectory(src/hal/components/test)
 add_subdirectory(src/hal/components/threads)
 add_subdirectory(src/hal/components/hostmot2)
 
-#add_subdirectory(src/hal/components/dofs/cpp_interface)
-#add_subdirectory(src/hal/components/dofs)
+# Ethercat lcec driver.
+add_subdirectory(src/hal/components/ethercat)
 
-#add_subdirectory(src/hal/components/gvd/cpp_interface)
-#add_subdirectory(src/hal/components/gvd)
+# Mesa hardware driver.
+add_subdirectory(src/hal/components/hm2_eth)
 
-#add_subdirectory(src/hal/components/kinematic)
-
-# Opencascade, kdl-kinematics etc has to be installed first.
-# add_subdirectory(src/hal/components/skynet/hal)
+# C & C++ mixed modules.
+add_subdirectory(src/hal/components/dofs)
+add_subdirectory(src/hal/components/kinematic)
+add_subdirectory(src/hal/components/synchrodofs)
 
 # Install the ethercat bus (optional for hal-core)
 # wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/ethercat-master.deb
 # dpkg -i ethercat-master.deb
-# add_subdirectory(src/hal/components/ethercat/lcec)
-# add_subdirectory(src/hal/components/ethercat/lcec_conf)
+
+add_subdirectory(src/hal/components/opencascade)
+add_subdirectory(src/hal/components/opencascade/cpp_interface)
 
 # Configure. This creates a config.h file in the ~/src dir wich is used to compile fixed
 # filepath's into the source. Wich an sich is a bad idea. This results in a fixed

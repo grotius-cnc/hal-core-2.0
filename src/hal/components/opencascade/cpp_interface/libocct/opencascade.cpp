@@ -630,7 +630,7 @@ void Opencascade::m_initialize_context()
 #ifdef _WIN32
         Handle(WNT_Window) wind = new WNT_Window((Aspect_Handle) window_handle);
 #else
-        Handle(Xw_Window) wind = new Xw_Window(m_display_donnection, (Window) window_handle);
+        Handle(Xw_Window) wind = new Xw_Window(m_display_donnection, winId());
 #endif
         m_viewer = new V3d_Viewer(m_graphic_driver);
 

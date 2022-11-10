@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 # Component name.
-set(PROJECT "dofs") # The name of the file excluding .c or .h
+set(PROJECT "synchrodofs") # The name of the file excluding .c or .h
 set(RT_CORE "halcore") # Link to halcore or for Lcnc use linuxcnchal
 project(${PROJECT} C CXX ASM) # Asm is optional.
 
@@ -25,6 +25,9 @@ SET(GCC_COVERAGE_COMPILE_FLAGS "
     -Drealtime -D__MODULE__ -DSIM -fPIC -Os pthread rt")
 add_definitions(-DRTAPI -DUSPACE -DRTAPI -D_GNU_SOURCE -D__MODULE__ )
 
+include_directories("/usr/include/eigen3")
+find_package (Eigen3 3.3 REQUIRED)
+
 # No "lib" before filename.
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
@@ -43,8 +46,10 @@ ADD_LIBRARY(${PROJECT} SHARED
 
 # Link to other libraries
 target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}/build/src/hal/${RT_CORE}")
-target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE})
+target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE} )
 
 # make install
 install(TARGETS ${PROJECT} DESTINATION ${RT_DIR})
+
+
 

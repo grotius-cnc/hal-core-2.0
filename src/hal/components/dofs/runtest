@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ../../../../
-
+echo $(pwd)
 cd scripts
 . ./rip-environment
 ./halclean

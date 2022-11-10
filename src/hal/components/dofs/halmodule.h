@@ -32,4 +32,4 @@ struct result {
 
 extern struct result wrapper_get_pos_array(struct result input);
 
-#endif // HALMODULE_H
+#endif
