@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+cd ../../../../
+
+echo $(pwd)
+
+cd scripts
+./halclean
+cd ..
+
+cd bin
+
+./halcmd stop
+./halcmd loadrt threads name1=base-thread fp1=0 period1=30000 name2=servo-thread period2=1000000
+./halcmd start
+./halcmd show

@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+cd ../../../../
+echo $(pwd)
+PWD_DIR=$(pwd)
+
+cd scripts
+./halclean
+cd ..
+cd bin
+
+./halcmd stop
+
+# ./halcmd loadrt hostmot2 
+# Fill in your data : [debug_idrom=N] [debug_module_descriptors=N] [debug_pin_descriptors=N] [debug_modules=N] 
+# http://linuxcnc.org/docs/html/man/man9/hostmot2.9.html
+
+./halcmd start
+
+./halcmd show
+

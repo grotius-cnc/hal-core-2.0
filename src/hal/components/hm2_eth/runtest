@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+cd ../../../../
+echo $(pwd)
+PWD_DIR=$(pwe)
+
+cd scripts
+./halclean
+cd ..
+cd bin
+
+./halcmd stop
+
+# http://linuxcnc.org/docs/html/man/man9/hm2_eth.9.html
+#   Finish this line first :
+#   ./halcmd loadrt hm2_eth ".......yourdata..........."
+#
+# [config="str[,str...]"] [board_ip=ip[,ip...]]
+# [board_mac=mac[,mac...]]
+
+./halcmd loadrt hm2_eth 
+./halcmd start
+
+./halcmd show
+

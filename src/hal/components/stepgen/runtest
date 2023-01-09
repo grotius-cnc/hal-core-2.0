@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+cd ../../../../
+
+echo ($pwd)
+
+cd scripts 
+./halclean
+cd ..
+
+cd bin
+
+./halcmd stop
+./halcmd loadrt stepgen step_type=0 ctrl_type=v
+./halcmd start
+./halcmd show
+

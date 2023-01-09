@@ -1,0 +1,46 @@
+#!/bin/bash
+
+echo $(pwd)
+PWD_DIR=$(pwd)
+SRC_DIR=$PWD_DIR/src
+BIN_DIR=$PWD_DIR/bin
+RT_DIR=$PWD_DIR/rtlib
+LIB_DIR=$PWD_DIR/lib
+SCRIPT_DIR=$PWD_DIR/scripts
+VENDOR_DIR=$PWD_DIR/src/vendor
+
+# Clean bin dir.
+cd bin
+rm -rf module_helper
+rm -rf rtapi_app
+rm halcmd
+cd ..
+
+# Clean rtlib.
+rm rtlib/*
+
+# Clean previous build.
+rm build
+mkdir -p build
+cd build
+cmake .. && make
+
+# Install files.
+make install
+
+echo "Installation complete !"
+echo $(pwd)
+cd ..
+cd bin
+./setroot
+./runtest
+
+
+
+
+
+
+
+
+
+

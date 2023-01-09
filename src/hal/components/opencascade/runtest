@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd ../../../../
+echo $(pwd)
+PWD_DIR=$(pwd)
+
+cd scripts
+./halclean
+cd ..
+
+cd rtlib
+./myApp &
+cd ..
+
+
+
+
+
+
+
+
+
