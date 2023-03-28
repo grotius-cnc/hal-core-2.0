@@ -177,42 +177,6 @@ static int setup_pins(){
 
 
 
-//set_a_dv(2,10);
-
-//struct sc_period p={0};
-//p.vo=0;
-//p.ve=50;
-//p.acs=0;
-//p.ace=0;
-
-//struct sc_period *pvec={0};
-//size_t size=0;
-
-//pvec= t1_t2_t3_pvec(p);
-
-//rtapi_print_msg(RTAPI_MSG_ERR,"i: %f \n",pvec[0].ncs);
-//rtapi_print_msg(RTAPI_MSG_ERR,"i: %f \n",pvec[1].ncs);
-//rtapi_print_msg(RTAPI_MSG_ERR,"i: %f \n",pvec[2].ncs);
-
-//rtapi_print_msg(RTAPI_MSG_ERR,"running \n");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
