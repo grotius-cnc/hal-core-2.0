@@ -1,13 +1,9 @@
 #!/usr/bin/bash
 
-# For new users who forget:
-sudo ./setroot
-sudo ./setdir
-
 cd .. && cd scripts
 . ./rip-environment 
 # Clean previous hal session:
-./halrun -U
+./halclean 
 
 cd ..
 cd bin

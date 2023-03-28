@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,stepgen.so -o stepgen.so CMakeFiles/stepgen.dir/stepgen.c.o  -Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore: -lpthread -lrt ../../halcore/libhalcore.so 

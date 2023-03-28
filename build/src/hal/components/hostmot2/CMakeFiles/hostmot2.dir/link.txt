@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,hostmot2.so -o hostmot2.so CMakeFiles/hostmot2.dir/hostmot2.c.o  -Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore: -lpthread -lrt ../../halcore/libhalcore.so 

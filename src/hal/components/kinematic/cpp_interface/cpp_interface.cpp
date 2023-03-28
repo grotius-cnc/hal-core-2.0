@@ -27,7 +27,7 @@ data Cpp_interface::init(data d){
     KDLChain.addSegment(KDL::Segment("J3",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(d.J3_x,d.J3_y,d.J3_z))));        //J4
     KDLChain.addSegment(KDL::Segment("J4",KDL::Joint(KDL::Joint::RotY), KDL::Frame(KDL::Vector(d.J4_x,d.J4_y,d.J4_z))));        //J5 to end-effector (robot flange axis 6)
     KDLChain.addSegment(KDL::Segment("J5",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(d.J5_x,d.J5_y,d.J5_z))));        //Tool cone lenght.
-
+    KDLChain.addSegment(KDL::Segment("tooldir",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(100,0,0))));                   //Tool cone lenght.
     // The floortrack is loaded outside the KDLChainVec size.
 
     KDLJointMin.resize(KDLChain.getNrOfSegments());
@@ -67,7 +67,7 @@ data Cpp_interface::init(data d){
 
     // Perform a forward kinematic calculation (fk).
     KDL::ChainFkSolverPos_recursive fksolver = KDL::ChainFkSolverPos_recursive(KDLChain);
-    int status = fksolver.JntToCart(KDLJointCur,cart,-1);
+    int status = fksolver.JntToCart(KDLJointCur,cart,KDLChain.getNrOfSegments()-1);
 
     if(status==0 || status>0){
         //std::cout<<"fk init ok"<<std::endl;
@@ -96,6 +96,9 @@ data Cpp_interface::init(data d){
         d.error=1;
     }
 
+    fksolver.JntToCart(KDLJointCur,cart,-1); //! tooldir coordinate.
+    std::cout<<"tooldir x:"<<cart.p.x()<<" y:"<<cart.p.y()<<" z:"<<cart.p.z()<<std::endl;
+
     return d;
 }
 
@@ -116,6 +119,10 @@ data Cpp_interface::fk(data d){
     KDLChain.addSegment(KDL::Segment("J3",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(d.J3_x,d.J3_y,d.J3_z))));        //J4
     KDLChain.addSegment(KDL::Segment("J4",KDL::Joint(KDL::Joint::RotY), KDL::Frame(KDL::Vector(d.J4_x,d.J4_y,d.J4_z))));        //J5 to end-effector (robot flange axis 6)
     KDLChain.addSegment(KDL::Segment("J5",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(d.J5_x,d.J5_y,d.J5_z))));        //Tool cone lenght.
+    //! This segment is not calculated in the chain. It is calclated afterwards.
+    KDLChain.addSegment(KDL::Segment("tooldir",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(d.tooldir_x,
+                                                                                                    d.tooldir_y,
+                                                                                                    d.tooldir_z))));            //Tooldir
 
     // The floortrack is loaded outside the KDLChainVec size.
     KDLJointMin.resize(KDLChain.getNrOfSegments());
@@ -155,7 +162,7 @@ data Cpp_interface::fk(data d){
 
     // Perform a forward kinematic calculation (fk).
     KDL::ChainFkSolverPos_recursive fksolver = KDL::ChainFkSolverPos_recursive(KDLChain);
-    int status = fksolver.JntToCart(KDLJointCur,cart,-1);
+    int status = fksolver.JntToCart(KDLJointCur,cart,KDLChain.getNrOfSegments()-1); //! Minus tooldir joint..
 
     if(status==0 || status>0){
         //std::cout<<"fk ok"<<std::endl;
@@ -174,6 +181,12 @@ data Cpp_interface::fk(data d){
         //std::cout<<"fk error"<<std::endl;
         d.error=1;
     }
+
+    fksolver.JntToCart(KDLJointCur,cart,-1); //! tooldir coordinate.
+    d.tooldir_result_x=cart.p.x();
+    d.tooldir_result_y=cart.p.y();
+    d.tooldir_result_z=cart.p.z();
+    std::cout<<"tooldir x:"<<cart.p.x()<<" y:"<<cart.p.y()<<" z:"<<cart.p.z()<<std::endl;
 
     return d;
 }
@@ -237,11 +250,6 @@ data Cpp_interface::ik(data d){
     cart.p.y(d.Carty);
     cart.p.z(d.Cartz);
 
-    // Testparams for kuka robot.
-    // cart.p.x(500);
-    // cart.p.y(0);
-    // cart.p.z(500);
-
     //cart.M.EulerZYX(d.Eulerz,d.Eulery,d.Eulerx);
 
     cart.M.DoRotZ(d.Eulerz-cart.M.GetRot().z());
@@ -254,7 +262,7 @@ data Cpp_interface::ik(data d){
 
     KDL::ChainIkSolverVel_pinv iksolverv(KDLChain); //Inverse velocity solver needed for IK
     if(d.Iterations==0){d.Iterations=100;}
-    KDL::ChainIkSolverPos_NR_JL iksolver(KDLChain, KDLJointMin, KDLJointMax, fksolver, iksolverv, d.Iterations, 1e-6); //max 100 iterations, stop at accuracy 1e-6
+    KDL::ChainIkSolverPos_NR_JL iksolver(KDLChain, KDLJointMin, KDLJointMax, fksolver, iksolverv, d.Iterations, 1e-6); // max 100 iterations, stop at accuracy 1e-6
     // We can add a hal pin in the future to set max iteration values.
 
     KDL::JntArray JntResult(KDLChain.getNrOfJoints());
@@ -280,6 +288,11 @@ data Cpp_interface::ik(data d){
         //std::cout<<iksolver.getError()<<std::endl;
         //std::cout<<"ik error"<<std::endl;
         d.error=1;
+    }
+
+    //! If there is a tooldir value input, calculate fk tooldir position.
+    if(d.tooldir_x!=0 || d.tooldir_y!=0 || d.tooldir_z!=0 ){
+        d=fk(d);
     }
     return d;
 }

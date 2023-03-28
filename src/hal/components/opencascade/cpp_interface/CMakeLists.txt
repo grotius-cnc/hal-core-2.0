@@ -1,6 +1,16 @@
+cmake_minimum_required(VERSION 3.5)
 set(PROJECT "myApp") # The name of the file excluding .c or .h
 set(RT_CORE "halcore") # Link to halcore or for Lcnc use linuxcnchal
 project(${PROJECT} C CXX ASM) # Asm is optional.
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set variables.
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
@@ -8,6 +18,7 @@ set(RTAPI_DIR "${SRC_DIR}/../../../../rtapi")
 set(HAL_DIR "${SRC_DIR}/../../../../hal")
 set(LIB_DIR "${SRC_DIR}/../../../../../lib")
 set(RT_DIR "${SRC_DIR}/../../../../../rtlib")
+set(VENDOR_DIR "${SRC_DIR}/../../../../vendor")
 # If user decides to create a build dir use the path.
 set(BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 
@@ -17,8 +28,26 @@ include_directories(${RTAPI_DIR})
 include_directories(${HAL_DIR})
 include_directories(${LIB_DIR})
 
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+
+# Kdl
+include_directories("/usr/include/eigen3")
+find_package (Eigen3 3.3 REQUIRED)
+
+include_directories("/usr/local/include/kdl")
+#find_package (orocos-kdl 1.0 REQUIRED)
+
+include_directories("/usr/include/eigen3")
+find_package (Eigen3 3.3 REQUIRED)
+
+include_directories("${VENDOR_DIR}/orocos_kinematics_dynamics/orocos_kdl/src")
+add_library(kdl SHARED IMPORTED)
+set_target_properties(kdl PROPERTIES IMPORTED_LOCATION ${VENDOR_DIR}/orocos_kinematics_dynamics/orocos_kdl/build/src/liborocos-kdl.so)
+
 # Opencascade
 find_package (OpenCASCADE REQUIRED)
+
 INCLUDE_DIRECTORIES(${OpenCASCADE_INCLUDE_DIR})
 SET(OpenCASCADE_LIBS
     TKGeomAlgo TKMesh TKHLR TKBO TKShHealing
@@ -41,10 +70,7 @@ SET(OpenCASCADE_LIBS
     TKVRML
     # -- ViewerTest
     TKViewerTest
-)
-
-find_package(OpenGL REQUIRED)
-find_package(GLUT REQUIRED)
+    )
 
 # Qt
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -63,17 +89,17 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets OpenGL REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets OpenGL REQUIRED)
 
 include_directories("${SRC_DIR}")
-include_directories("usr/local/include/opencascade")
+include_directories("${VENDOR}/OCCT/build/include/opencascade")
 include_directories("usr/include")
 include_directories("usr/local/lib")
 
-add_executable(myApp
-    ${SRC_DIR}/cplusplus.h
-    ${SRC_DIR}/cplusplus.cpp
+set(PROJECT_SOURCES
     ${SRC_DIR}/main.cpp
     ${SRC_DIR}/mainwindow.cpp
     ${SRC_DIR}/mainwindow.h
     ${SRC_DIR}/mainwindow.ui
+    ${SRC_DIR}/hal/halio.h
+    ${SRC_DIR}/hal/halio.cpp
     ${SRC_DIR}/libdxfrw/drw_base.h
     ${SRC_DIR}/libdxfrw/drw_classes.h
     ${SRC_DIR}/libdxfrw/drw_entities.h
@@ -145,10 +171,34 @@ add_executable(myApp
     ${SRC_DIR}/libspline/bezier_spline.cpp
     ${SRC_DIR}/libspline/cubic_spline.cpp
     ${SRC_DIR}/libspline/spline.cpp
-)
-# Link to other libraries
+    ${SRC_DIR}/libkinematic/kinematic.h
+    )
+
+if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+    qt_add_executable(${PROJECT}
+        ${PROJECT_SOURCES}
+    )
+else()
+    if(ANDROID)
+        add_library(${PROJECT} SHARED
+            ${PROJECT_SOURCES}
+        )
+    else()
+        add_executable(${PROJECT}
+            ${PROJECT_SOURCES}
+        )
+    endif()
+endif()
+
+target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}/build/src/hal/halcore/${RT_CORE}")
+
+target_include_directories(${PROJECT_NAME} PRIVATE "/usr/local/lib")
+
+#target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}/../../halcore/${RT_CORE}")
+
+# Link to other libraries /opt/hal-core-2.0/build/src/hal/halcore
 target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}/build/src/hal/${RT_CORE}")
-target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE} ${OpenCASCADE_LIBS} Qt5::Widgets Qt5::OpenGL ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
+target_link_libraries(${PROJECT_NAME} PRIVATE pthread rt ${RT_CORE} ${OpenCASCADE_LIBS} Qt5::Widgets Qt5::OpenGL ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} kdl)
 
 # make install
 install(TARGETS ${PROJECT} DESTINATION ${RT_DIR})

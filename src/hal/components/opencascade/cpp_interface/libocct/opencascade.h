@@ -68,9 +68,6 @@ public:
         Handle(AIS_Shape) Ais_shape;
         std::string info;
 
-        // Hal io
-        std::vector<io> iovec;
-
         double vo=0,ve=0,velmax=0,accmax=0;
     };
     std::vector<bucket> bucketvec;
@@ -80,21 +77,22 @@ public:
     bool Readstepfile(const std::string& theStepName);
     void Visit(const TDF_Label& theLabel);
     void Init_robot();
-    void setup_tcp_origin();
+    void setup_tcp_origin(float x, float y, float z);
 
     void show_shape(Handle(AIS_Shape) shape);
     void Redraw();
     //! Values in radians.
-    void update_jointpos(double j0, double j1, double j2, double j3, double j4, double j5);
+    void update_jointpos(double j0, double j1, double j2, double j3, double j4, double j5,
+                         float j0_x, float j0_y, float j0_z,
+                         float j1_x, float j1_y, float j1_z,
+                         float j2_x, float j2_y, float j2_z,
+                         float j3_x, float j3_y, float j3_z,
+                         float j4_x, float j4_y, float j4_z);
 
-    // Draw primitives and tool orientation and store them with extra info.
-    void draw_line_store_into_bucketvec(bucket b);
-
-    // Preview line
+    //! Preview line
     void draw_preview_cone(std::string type, gp_Trsf trsf);
-    void empty_preview_bucket();
 
-    // View
+    //! View
     void Set_orthographic();
     void Set_perspective();
     void set_view_front();
@@ -104,11 +102,6 @@ public:
     void set_view_top();
     void set_view_bottom();
 
-    // Selection
-    void get_selections();
-    void delete_selections();
-
-
 private:
     void m_initialize_context();
     Handle(AIS_InteractiveContext) m_context;
@@ -117,7 +110,7 @@ private:
     Handle(Graphic3d_GraphicDriver) m_graphic_driver;
     Handle(AIS_InteractiveObject) m_aisViewCube;
 
-    // Xyz axis sign.
+    //! Xyz axis sign.
     Handle(Geom_Axis2Placement) axis;
     Handle(AIS_Trihedron) aisTrihedron;
     std::vector<Handle(AIS_Trihedron)> aisTrihedrons;

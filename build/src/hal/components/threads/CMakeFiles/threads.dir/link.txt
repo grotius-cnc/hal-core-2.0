@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,threads.so -o threads.so CMakeFiles/threads.dir/threads.c.o  -Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore: -lpthread -lrt ../../halcore/libhalcore.so 

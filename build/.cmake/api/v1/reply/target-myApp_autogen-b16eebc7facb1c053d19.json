@@ -1,0 +1,65 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/hal/components/opencascade/cpp_interface/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "halcore::@03ae0abca63d3712b924"
+		}
+	],
+	"id" : "myApp_autogen::@a01555974efc4cccba18",
+	"isGeneratorProvided" : true,
+	"name" : "myApp_autogen",
+	"paths" : 
+	{
+		"build" : "src/hal/components/opencascade/cpp_interface",
+		"source" : "src/hal/components/opencascade/cpp_interface"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/hal/components/opencascade/cpp_interface/CMakeFiles/myApp_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/hal/components/opencascade/cpp_interface/CMakeFiles/myApp_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Because module_helper & rtapi_app have root acces, we can not install them with cmake.
+# To avoid cmake errors, this is a work around.
+
+echo $(pwd)
+cd bin
+rm -rf module_helper rtapi_app
+cd ..
+
+cd build
+make && make install
+cd ..
+
+cd bin
+./setroot
+
+
+
+
+
+
+
+

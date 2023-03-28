@@ -6,6 +6,7 @@ PWD_DIR=$(pwd)
 
 cd scripts
 ./halclean
+
 cd ..
 cd bin
 	

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,hal_lib.so -o hal_lib.so CMakeFiles/hal_lib.dir/__/hal_lib.c.o 

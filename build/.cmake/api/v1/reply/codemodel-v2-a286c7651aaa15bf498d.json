@@ -1,0 +1,717 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src/hal/halcore",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "src/hal/halcore",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/module_helper",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "src/module_helper",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/hal/halcmd",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "src/hal/halcmd",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/hal/hallib",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "src/hal/hallib",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/rtapi",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "src/rtapi",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "src/hal/components/parport",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "src/hal/components/parport",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/hal/components/stepgen",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "src/hal/components/stepgen",
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"build" : "src/hal/components/test",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 8,
+					"source" : "src/hal/components/test",
+					"targetIndexes" : 
+					[
+						18
+					]
+				},
+				{
+					"build" : "src/hal/components/threads",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 9,
+					"source" : "src/hal/components/threads",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "src/hal/components/hostmot2",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 10,
+					"source" : "src/hal/components/hostmot2",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/hal/components/motion",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 11,
+					"source" : "src/hal/components/motion",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "src/hal/components/scurve",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 12,
+					"source" : "src/hal/components/scurve",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "src/hal/components/ethercat",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 13,
+					"source" : "src/hal/components/ethercat",
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				},
+				{
+					"build" : "src/hal/components/hm2_eth",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 14,
+					"source" : "src/hal/components/hm2_eth",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/hal/components/dofs",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 15,
+					"source" : "src/hal/components/dofs",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/hal/components/synchrodofs",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 16,
+					"source" : "src/hal/components/synchrodofs",
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"build" : "src/hal/components/kinematic",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 17,
+					"source" : "src/hal/components/kinematic",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/hal/components/opencascade/cpp_interface",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 18,
+					"source" : "src/hal/components/opencascade/cpp_interface",
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Skynet"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "halcore",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "module_helper",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "halcmd",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "hal_lib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "rtapi_app",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "hal_parport",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "stepgen",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "test",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						18
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "threads",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "hostmot2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "motion",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						12
+					],
+					"name" : "scurve",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						13
+					],
+					"name" : "lcec_conf",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						14
+					],
+					"name" : "hm2_eth",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						15
+					],
+					"name" : "dofs",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						16
+					],
+					"name" : "synchrodofs",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						17
+					],
+					"name" : "hal_kinematic",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						18
+					],
+					"name" : "myApp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 15,
+					"id" : "dofs::@f6835df8f8a088677412",
+					"jsonFile" : "target-dofs-29ab69e0b8e8360c5e0d.json",
+					"name" : "dofs",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "hal_kinematic::@8165cc24f4f58723580f",
+					"jsonFile" : "target-hal_kinematic-d2a93f45c3b07dcdb607.json",
+					"name" : "hal_kinematic",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "hal_lib::@19979c29f88e74ccd03d",
+					"jsonFile" : "target-hal_lib-ffa28653280739d2af25.json",
+					"name" : "hal_lib",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "hal_parport::@ded86842408d567e2149",
+					"jsonFile" : "target-hal_parport-c012dd3eac83b5999edd.json",
+					"name" : "hal_parport",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "halcmd::@156c6ea6405e8ee9e51b",
+					"jsonFile" : "target-halcmd-837de19ed8a6fd6ee96d.json",
+					"name" : "halcmd",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "halcore::@03ae0abca63d3712b924",
+					"jsonFile" : "target-halcore-8972e9386cffb197b851.json",
+					"name" : "halcore",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "hm2_eth::@7600f0d6e798cb27d1ac",
+					"jsonFile" : "target-hm2_eth-e06a2d202d882fdad116.json",
+					"name" : "hm2_eth",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "hostmot2::@d8c26b73a7983bb482e9",
+					"jsonFile" : "target-hostmot2-0bd6970721d3929cb149.json",
+					"name" : "hostmot2",
+					"projectIndex" : 10
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "lcec::@7a67a2484e21db266501",
+					"jsonFile" : "target-lcec-c464f1e4924b1b4135ec.json",
+					"name" : "lcec",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "lcec_conf::@7a67a2484e21db266501",
+					"jsonFile" : "target-lcec_conf-e8de30e27c9ebb099aa3.json",
+					"name" : "lcec_conf",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "module_helper::@1283df4eed0604c5eaa6",
+					"jsonFile" : "target-module_helper-363ff4e983522d87b73c.json",
+					"name" : "module_helper",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "motion::@2be8537d05fadbf0f6b9",
+					"jsonFile" : "target-motion-9fe4fae74aceab0d418c.json",
+					"name" : "motion",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "myApp::@a01555974efc4cccba18",
+					"jsonFile" : "target-myApp-ba67476642f20f36c42b.json",
+					"name" : "myApp",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "myApp_autogen::@a01555974efc4cccba18",
+					"jsonFile" : "target-myApp_autogen-b16eebc7facb1c053d19.json",
+					"name" : "myApp_autogen",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "rtapi_app::@84c35410116682210bb7",
+					"jsonFile" : "target-rtapi_app-cbcbf18aa2e9e1505174.json",
+					"name" : "rtapi_app",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "scurve::@d2153956014cdd9fb0d0",
+					"jsonFile" : "target-scurve-6a50076823f31713e204.json",
+					"name" : "scurve",
+					"projectIndex" : 12
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "stepgen::@6246d1883fa3c4f314da",
+					"jsonFile" : "target-stepgen-e9513a94818faae73d72.json",
+					"name" : "stepgen",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "synchrodofs::@cebce6787148719f3bd4",
+					"jsonFile" : "target-synchrodofs-ead33cccac402b368988.json",
+					"name" : "synchrodofs",
+					"projectIndex" : 16
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "test::@99efcc7c766a9db851ea",
+					"jsonFile" : "target-test-f5e902f0298b56ff3822.json",
+					"name" : "test",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "threads::@207a95e8d197e06069fa",
+					"jsonFile" : "target-threads-d60b0aad2a2d4420d7b8.json",
+					"name" : "threads",
+					"projectIndex" : 9
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/user/hal-core-2.0/build",
+		"source" : "/home/user/hal-core-2.0"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

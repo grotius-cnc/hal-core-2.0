@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,hal_parport.so -o hal_parport.so CMakeFiles/hal_parport.dir/hal_parport.c.o  -Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore: -lpthread -lrt ../../halcore/libhalcore.so 

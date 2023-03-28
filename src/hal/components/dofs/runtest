@@ -2,7 +2,6 @@
 cd ../../../../
 echo $(pwd)
 cd scripts
-. ./rip-environment
 ./halclean
 cd  ..
 cd bin

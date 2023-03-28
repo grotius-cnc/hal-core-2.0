@@ -91,6 +91,9 @@ struct data {
     int Ik_from_init;
     double Iterations; // Ik iteration value ~100
     int error=0;
+
+    double tooldir_x=0, tooldir_y=0, tooldir_z=0;
+    double tooldir_result_x=0, tooldir_result_y=0, tooldir_result_z=0;
 };
 
 class Cpp_interface{

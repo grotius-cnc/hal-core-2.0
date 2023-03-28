@@ -10,6 +10,7 @@ set(RTAPI_DIR "${SRC_DIR}/../../../rtapi")
 set(HAL_DIR "${SRC_DIR}/../../../hal")
 set(LIB_DIR "${SRC_DIR}/../../../../lib")
 set(RT_DIR "${SRC_DIR}/../../../../rtlib")
+set(VENDOR_DIR "${SRC_DIR}/../../../vendor")
 # If user decides to create a build dir use the path.
 set(BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 
@@ -28,9 +29,9 @@ add_definitions(-DRTAPI -DUSPACE -DRTAPI -D_GNU_SOURCE -D__MODULE__ )
 include_directories("/usr/include/eigen3")
 find_package (Eigen3 3.3 REQUIRED)
 
-include_directories("/opt/hal-core-2.0/src/vendor/orocos_kinematics_dynamics/orocos_kdl/src")
+include_directories("${VENDOR_DIR}/orocos_kinematics_dynamics/orocos_kdl/src")
 add_library(kdl SHARED IMPORTED)
-set_target_properties(kdl PROPERTIES IMPORTED_LOCATION /opt/hal-core-2.0/src/vendor/orocos_kinematics_dynamics/orocos_kdl/build/src/liborocos-kdl.so)
+set_target_properties(kdl PROPERTIES IMPORTED_LOCATION ${VENDOR_DIR}/orocos_kinematics_dynamics/orocos_kdl/build/src/liborocos-kdl.so)
 
 # No "lib" before filename.
 set(CMAKE_SHARED_LIBRARY_PREFIX "")

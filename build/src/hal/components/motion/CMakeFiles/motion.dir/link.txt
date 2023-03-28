@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,motion.so -o motion.so CMakeFiles/motion.dir/motion.c.o  -Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore: -lpthread -lrt ../../halcore/libhalcore.so 

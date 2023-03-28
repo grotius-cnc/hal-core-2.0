@@ -4,50 +4,16 @@ cd ../../../../
 echo $(pwd)
 PWD_DIR=$(pwd)
 
-# The gui need the stepfile path. We pass the info to argv[]
-#STEPFILE_DIR=$PWD_DIR/machines/mitsubishi_rv_6sdl/
-
-
 cd scripts
 ./halclean
-cd ..
-
-cd bin
-
-# stop hal.
-./halcmd stop
-
-# Load rt component:
-./halcmd loadrt threads name1=base-thread fp1=0 period1=50000 name2=servo-thread period2=10000000
-
-./halcmd loadrt hal_kinematic
-
-# Load the kuka model:
-# halcmd loadrt opencascade stepfilepath=$PWD_DIR/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus display_hz=60
-# Load the mitsubishi model:
-./halcmd loadrt hal_opencascade stepfilepath=$PWD_DIR/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl display_hz=60
-
-./halcmd addf hal_kinematic servo-thread
-./halcmd addf hal_opencascade servo-thread
-
-# Load the kuka params:
-#halcmd -f $PWD_DIR/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus/kuka_kr_6_10_agilus.hal
-# Load the mitsubishi params:
-./halcmd -f $PWD_DIR/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl/mitsubishi_rv_6sdl.hal
-
-# Link (net) kinematic results to opencascade.
-./halcmd -f $PWD_DIR/src/hal/components/opencascade/link.hal
-
-# start hal.
-./halcmd start
-
-./halcmd show
-
 cd ..
 
 cd rtlib
 ./myApp &
 cd ..
+
+
+
 
 
 

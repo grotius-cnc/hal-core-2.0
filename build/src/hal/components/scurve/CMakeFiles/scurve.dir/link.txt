@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,scurve.so -o scurve.so CMakeFiles/scurve.dir/sc_engine.c.o CMakeFiles/scurve.dir/scurve.c.o  -Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore: -lpthread -lrt ../../halcore/libhalcore.so 

@@ -42,6 +42,8 @@ add_subdirectory(src/hal/components/stepgen)
 add_subdirectory(src/hal/components/test)
 add_subdirectory(src/hal/components/threads)
 add_subdirectory(src/hal/components/hostmot2)
+add_subdirectory(src/hal/components/motion)
+add_subdirectory(src/hal/components/scurve)
 
 # Ethercat lcec driver.
 add_subdirectory(src/hal/components/ethercat)
@@ -51,21 +53,14 @@ add_subdirectory(src/hal/components/hm2_eth)
 
 # C & C++ mixed modules.
 add_subdirectory(src/hal/components/dofs)
-add_subdirectory(src/hal/components/kinematic)
 add_subdirectory(src/hal/components/synchrodofs)
 
-# Install the ethercat bus (optional for hal-core)
-# wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/ethercat-master.deb
-# dpkg -i ethercat-master.deb
+# Kdl kinematic needs orocos-kdl & eigen3.
+add_subdirectory(src/hal/components/kinematic)
 
-add_subdirectory(src/hal/components/opencascade)
+# Opencascade, kinematic, qt-creator example.
+# Needs orocos-kdl, opencascade, qt-creator. Edit qt filepaths in the makefile.
 add_subdirectory(src/hal/components/opencascade/cpp_interface)
-
-# Configure. This creates a config.h file in the ~/src dir wich is used to compile fixed
-# filepath's into the source. Wich an sich is a bad idea. This results in a fixed
-# directory software.
-# execute_process(COMMAND bash -c "${SRC_DIR}/configure")
-
 
 
 

@@ -1,0 +1,1257 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/hal/components/opencascade/cpp_interface/myApp"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"install",
+			"target_link_libraries",
+			"include_directories",
+			"target_include_directories",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"src/hal/components/opencascade/cpp_interface/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 187,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 204,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 201,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 44,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 92,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 93,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 94,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 193,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 195,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 200,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 51,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 83,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"backtrace" : 3,
+					"fragment" : "-fPIC"
+				},
+				{
+					"fragment" : "-std=gnu++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "QT_NO_DEBUG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "QT_OPENGL_LIB"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "QT_WIDGETS_LIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "/home/user/hal-core-2.0/build/src/hal/components/opencascade/cpp_interface"
+				},
+				{
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface"
+				},
+				{
+					"backtrace" : 0,
+					"path" : "/home/user/hal-core-2.0/build/src/hal/components/opencascade/cpp_interface/myApp_autogen/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/../../../../rtapi"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/../../../../hal"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/../../../../../lib"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/usr/include/eigen3"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/usr/local/include/kdl"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/../../../../vendor/orocos_kinematics_dynamics/orocos_kdl/src"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/OCCT/build/include/opencascade"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/usr/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/usr/local/lib"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/build/src/hal/halcore/halcore"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/usr/local/lib"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/build/src/hal/halcore"
+				},
+				{
+					"backtrace" : 16,
+					"isSystem" : true,
+					"path" : "/usr/local/include/opencascade"
+				},
+				{
+					"backtrace" : 17,
+					"isSystem" : true,
+					"path" : "/opt/qt-creator/5.15.1/gcc_64/include/QtWidgets"
+				},
+				{
+					"backtrace" : 18,
+					"isSystem" : true,
+					"path" : "/opt/qt-creator/5.15.1/gcc_64/include/QtGui"
+				},
+				{
+					"backtrace" : 19,
+					"isSystem" : true,
+					"path" : "/opt/qt-creator/5.15.1/gcc_64/include"
+				},
+				{
+					"backtrace" : 20,
+					"isSystem" : true,
+					"path" : "/opt/qt-creator/5.15.1/gcc_64/include/QtCore"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/opt/qt-creator/5.15.1/gcc_64/./mkspecs/linux-g++"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/opt/qt-creator/5.15.1/gcc_64/include/QtOpenGL"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				6,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "halcore::@03ae0abca63d3712b924"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "myApp_autogen::@a01555974efc4cccba18"
+		}
+	],
+	"id" : "myApp::@a01555974efc4cccba18",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/../../../../../rtlib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore:/home/user/hal-core-2.0/src/hal/components/opencascade/cpp_interface/../../../../vendor/orocos_kinematics_dynamics/orocos_kdl/build/src:/usr/local/lib:/opt/qt-creator/5.15.1/gcc_64/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../../../halcore/libhalcore.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKOpenGl.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXSDRAW.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKBinXCAF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXmlXCAF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXDESTEP.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXDEIGES.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKSTL.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKMeshVS.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKVRML.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/opt/qt-creator/5.15.1/gcc_64/lib/libQt5OpenGL.so.5.15.1",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libGL.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libGLU.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libglut.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libXmu.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libXi.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../../../../../../src/hal/components/opencascade/cpp_interface/../../../../vendor/orocos_kinematics_dynamics/orocos_kdl/build/src/liborocos-kdl.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKRWMesh.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKDCAF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKViewerTest.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKTopTest.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKFeat.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKOffset.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKDraw.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libtcl.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKFillet.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKStd.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKStdL.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKBin.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKBinL.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXml.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXmlL.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKSTEP.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKSTEP209.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKSTEPAttr.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKSTEPBase.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXCAF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKVCAF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKV3d.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKMesh.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKHLR.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKService.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lfontconfig",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libfreeimage.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libfreetype.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lGL",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lX11",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKCAF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKLCAF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKCDF.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKIGES.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKXSBase.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKBool.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKBO.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKShHealing.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKPrim.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKTopAlgo.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKGeomAlgo.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKBRep.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKGeomBase.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKG3d.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKG2d.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKMath.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libTKXDE.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/local/lib/libTKernel.so.7.7.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lstdc++",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/opt/qt-creator/5.15.1/gcc_64/lib/libQt5Widgets.so.5.15.1",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/qt-creator/5.15.1/gcc_64/lib/libQt5Gui.so.5.15.1",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/qt-creator/5.15.1/gcc_64/lib/libQt5Core.so.5.15.1",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "myApp",
+	"nameOnDisk" : "myApp",
+	"paths" : 
+	{
+		"build" : "src/hal/components/opencascade/cpp_interface",
+		"source" : "src/hal/components/opencascade/cpp_interface"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				6,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				3,
+				5,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				78
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/hal/components/opencascade/cpp_interface/myApp_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/mainwindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/mainwindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/hal/halio.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/hal/halio.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_base.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_classes.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_entities.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_header.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_interface.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_objects.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/dx_data.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/dx_iface.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_cptable932.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_cptable936.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_cptable949.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_cptable950.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_cptables.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_dbg.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_textcodec.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgbuffer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader15.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader18.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader21.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader24.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader27.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgutil.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dxfreader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dxfwriter.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/rscodec.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/libdwgr.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/libdxfrw.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/libdxfrw_functions.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/main_doc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libgcode/gcode_program.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libgcode/interface.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libgcode/parser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libocct/draw_primitives.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libocct/opencascade.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libskynet/char_to_string.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libskynet/directory.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libspline/bezier_spline.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libspline/cubic_spline.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libspline/spline.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_classes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_entities.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_header.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/drw_objects.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/dx_iface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_dbg.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/drw_textcodec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgbuffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader15.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader18.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader21.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader24.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgreader27.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dwgutil.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dxfreader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/dxfwriter.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/intern/rscodec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/libdwgr.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/libdxfrw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libdxfrw/libdxfrw_functions.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libgcode/gcode_program.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libgcode/interface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libgcode/parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libocct/draw_primitives.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libocct/opencascade.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libskynet/char_to_string.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libskynet/directory.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libspline/bezier_spline.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libspline/cubic_spline.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/hal/components/opencascade/cpp_interface/libspline/spline.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/hal/components/opencascade/cpp_interface/libkinematic/kinematic.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

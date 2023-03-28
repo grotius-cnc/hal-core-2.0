@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,lcec_conf.so -o lcec_conf.so CMakeFiles/lcec_conf.dir/src/lcec_conf.c.o CMakeFiles/lcec_conf.dir/src/lcec_conf_util.c.o CMakeFiles/lcec_conf.dir/src/lcec_conf_icmds.c.o  -Wl,-rpath,/home/user/hal-core-2.0/build/src/hal/halcore: -lpthread -lrt ../../halcore/libhalcore.so -lexpat 

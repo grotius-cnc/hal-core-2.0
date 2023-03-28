@@ -1,0 +1,49 @@
+#!/bin/bash
+
+echo $(pwd)
+PWD_DIR=$(pwd)
+SRC_DIR=$PWD_DIR/src
+BIN_DIR=$PWD_DIR/bin
+RT_DIR=$PWD_DIR/rtlib
+LIB_DIR=$PWD_DIR/lib
+SCRIPT_DIR=$PWD_DIR/scripts
+VENDOR_DIR=$PWD_DIR/src/vendor
+
+# Check deps.
+sudo apt-get install -y cmake build-essential libudev-dev libboost-all-dev libreadline-dev wget
+
+echo "installing ethercat"
+git clone https://github.com/grotius-cnc/ethercat.git $VENDOR_DIR/ethercat
+cd $VENDOR_DIR/ethercat
+./preinst
+./postinst
+  
+sudo apt-get install libeigen3-dev libcppunit-dev
+echo "installing kdl"
+mkdir $VENDOR_DIR/orocos_kinematics_dynamics
+wget -O $VENDOR_DIR/orocos_kinematics_dynamics.tar.gz https://github.com/grotius-cnc/orocos_kinematics_dynamics/releases/download/precompiled_archive_amd64/orocos_kinematics_dynamics.tar.gz
+cd $VENDOR_DIR
+tar -xf orocos_kinematics_dynamics.tar.gz
+
+sudo apt-get install -y libfreetype6-dev doxygen cmake tcllib tklib tcl-dev tk-dev libx11-dev libgl1-mesa-dev libfreeimage-dev rapidjson-dev
+# To enable loading pictures in opencascade libfreeimage is needed.
+# Also set the flag in the cmakelists file ~Line 413 to enable libfreeimage, or use a cmake -- flag.
+sudo apt-get install -y libxmu-dev libxi-dev libfreeimage3 libfreeimage-dev ffmpeg
+
+echo "installing opencascade"
+mkdir $VENDOR_DIR/OCCT
+wget -O $VENDOR_DIR/OCCT.tar.gz https://github.com/grotius-cnc/OCCT/releases/download/amd64-precompiled/OCCT.tar.gz 
+cd $VENDOR_DIR/
+tar -xf OCCT.tar.gz
+    
+
+
+
+
+
+
+
+
+
+
+
